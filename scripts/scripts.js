@@ -27,11 +27,13 @@ $(document).ready(function() {
       $("body").removeClass().addClass("bg-dark");
       $("#bg-switch").text("Light Background");
       $("button").removeClass("btn-dark").addClass("btn-light");
+      $("#bg-switch, #showStory").css("color", "#333");
       x = 1;
     } else {
       $("body").removeClass().addClass("bg-light");
       $("#bg-switch").text("Dark Background");
       $("button").removeClass("btn-light").addClass("btn-dark");
+      $("#bg-switch, #showStory").css("color", "#ccc");
       x = 0;
     }
   });
