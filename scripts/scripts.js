@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $(".btn").click(function() {
-    var iPerson1 = $("#person1").val;
-    var iPerson2 = $("#person2").val;
-    var iAnimal = $("#animal").val;
-    var iExclamation = $("#exclamation").val;
-    var iVerb = $("#verb").val;
-    var iNoun = $("#noun").val;
+  $("#formOne").submit(function(event) {
+    var iPerson1 = $("input#person1").val();
+    var iPerson2 = $("input#person2").val();
+    var iAnimal = $("input#animal").val();
+    var iExclamation = $("input#exclamation").val();
+    var iVerb = $("input#verb").val();
+    var iNoun = $("input#noun").val();
     
     $(".person1").text(iPerson1);
     $(".person2").text(iPerson2);
@@ -13,5 +13,24 @@ $(document).ready(function() {
     $(".exclamation").text(iExclamation);
     $(".verb").text(iVerb);
     $(".noun").text(iNoun);
+    
+    $("#story").show();
+    
+    event.preventDefault();
+  });
+});
+
+$(document).ready(function() {
+  var x = 0;
+  $("#bg-switch").on('click', function() {
+    if(x == 0) {
+      $("body").removeClass().addClass("bg-dark");
+      $("#bg-switch").text("Light Background");
+      x = 1;
+    } else {
+      $("body").removeClass().addClass('bg-light');
+      $("#bg-switch").text("Dark Background");
+      x = 0;
+    }
   });
 });
