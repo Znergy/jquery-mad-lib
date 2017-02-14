@@ -7,6 +7,10 @@
   color: #333;
 }
 
+.btn-dark:hover {
+  color: #ccc;
+}
+
 .bg-dark {
   background-color: #333;
   color: #fff;
